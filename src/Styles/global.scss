@@ -1,0 +1,16 @@
+$primary-color: #5b0788;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+@import "../components/Header/Header";
+@import "../components/Navbar/Navbar";
+@import "../components/Attributes/Attributes";

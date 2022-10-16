@@ -1,0 +1,56 @@
+.attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .att-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      width: max-content;
+      gap: 1rem;
+
+      & + .att-row {
+        margin-top: 0.5rem;
+      }
+  
+      input {
+        width: 2.75rem;
+        height: 2.25rem;
+        border-radius: 4px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      span:nth-of-type(2) {
+        width: 2rem;
+        padding-left: 0.25rem;
+      }
+
+      .red-text {
+        color: rgb(184, 5, 5);
+      }
+    }
+
+    &:nth-child(2) {
+      align-items: end;
+    }
+  }
+}
+
+.attributes-title {
+  margin-top: 2rem;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
