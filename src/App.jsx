@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Attributes } from './components/Attributes/Attributes'
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
+
+import { GlobalSum } from './Contexts/GlobalSum';
+
 import './Styles/global.css';
 
 function App() {
@@ -11,11 +15,11 @@ function App() {
   } 
 
   return (
-    <>
+    <GlobalSum.Provider value={{ sum, setSum, callbackSum}}>
       <Header sumValue={sum}/>
       <Navbar />
-      <Attributes sumValue={callbackSum} />
-    </>
+      <Outlet />
+    </GlobalSum.Provider>
   )
 }
 

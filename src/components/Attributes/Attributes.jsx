@@ -1,11 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { numberMask } from '../../utils/numberMask';
 import { sum } from 'mathjs';
+import { GlobalSum } from '../../Contexts/GlobalSum';
 
 import '../../Styles/global.css';
 
-export const Attributes = ({ sumValue }) => {
+export const Attributes = () => {
+
+  const globalSum = useContext(GlobalSum)
+
 
   // Controlador Hook Form
   const {
@@ -95,7 +99,7 @@ export const Attributes = ({ sumValue }) => {
 
   // Soma indo para componente pai
   useEffect(() => {
-    sumValue(attSum)
+    globalSum.callbackSum(attSum)
   }, [attSum]);
 
   // Classe span
