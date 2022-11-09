@@ -12,13 +12,43 @@ a, a:visited, a:hover, a:active {
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 4rem;
-  display: flex;
   margin: 0;
-  color: #f1f1f1;
   background-color: #5b0788;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+.header:first-child {
+  padding-left: 0.5rem;
+}
+.header input {
+  display: flex;
+  align-items: center;
+  width: 6.25rem;
+  height: 2rem;
+  padding: 0 0.25rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.header .names-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.header .xp-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  padding: 0 0.75rem;
+  background-color: green;
 }
 
 .navbar {
