@@ -5,6 +5,7 @@ import { sum } from 'mathjs';
 import { GlobalSum } from '../../Contexts/GlobalSum';
 
 import '../../Styles/global.css';
+import { Navbar } from '../Navbar/Navbar';
 
 export const Attributes = () => {
 
@@ -104,6 +105,9 @@ export const Attributes = () => {
   return (
     <>
       <main className="attributes">
+        <div className="navbar-container">
+          <Navbar />
+        </div>
         <section>
           <div className="att-row">
             <span>For</span>

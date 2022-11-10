@@ -1,9 +1,15 @@
 .attributes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 1.5rem;
+  grid-template-rows: max-content 1fr;
+  // margin-top: 1.5rem;
   width: 100%;
   padding: 0 1rem;
+  gap: 2rem;
+
+  .navbar-container {
+    grid-column-start: span 2;
+  }
 
   section {
     width: 100%;

@@ -7,9 +7,11 @@ import '../../Styles/global.css';
 export const Navbar = () => {
   const globalSum = useContext(GlobalSum);
 
-  const [isActive, setIsActive] = useState(1);
+  const isActive = globalSum.navActive;
+  const setNavActive = globalSum.setNavActive;
+
   const handleClick = index => {
-    setIsActive(index);
+    setNavActive(index);
   };
 
   return (
@@ -24,7 +26,7 @@ export const Navbar = () => {
           <span>- {globalSum.attSum}</span>
         </Link>
         <Link 
-          to="skills" 
+          to="/skills" 
           onClick={() => handleClick(2)}
           className={isActive === 2 ? 'category-wrapper active' : 'category-wrapper'}
         >
@@ -32,7 +34,7 @@ export const Navbar = () => {
           <span>- 0 </span>
         </Link>
         <Link 
-          to="equipments" 
+          to="/equipments" 
           onClick={() => handleClick(3)}
           className={isActive === 3 ? 'category-wrapper active' : 'category-wrapper'}
         >

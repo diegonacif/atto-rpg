@@ -1,5 +1,6 @@
 import { useContext, useState, useRef } from 'react';
 import { GlobalSum } from '../../Contexts/GlobalSum';
+import { Link } from 'react-router-dom';
 
 // Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
@@ -46,13 +47,16 @@ export const PointsButton = () => {
       className="points-button-container"
       ref={refContainer} // Outside Click (Reference)
     >
-      <span>XP: {globalSum.sum}</span>
+      <div className="result-wrapper">
+        <span>XP</span>
+        <span>{globalSum.sum}</span>
+      </div>
       {
         transitionCost(
           (styles, item) => item &&
           <animated.div className="total-cost" style={styles}>
             <span>Soma geral</span>
-            <span>1010</span>
+            <span>{globalSum.sum}</span>
           </animated.div>
         )
       }
@@ -60,8 +64,10 @@ export const PointsButton = () => {
         transitionExp(
           (styles, item) => item &&
           <animated.div className="exp-link" style={styles}>
-            <span>Exp total</span>
-            <span>1020</span>
+            <Link to="experience" onClick={() => globalSum.setNavActive(0)}>
+              <span>Exp total</span>
+              <span>1020</span>
+            </Link>
           </animated.div>
         )
       }
