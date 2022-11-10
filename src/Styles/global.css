@@ -33,7 +33,7 @@ a, a:visited, a:hover, a:active {
 .header input {
   display: flex;
   align-items: center;
-  width: 6rem;
+  width: 4rem;
   height: 2rem;
   padding: 0 0.25rem;
   color: white;

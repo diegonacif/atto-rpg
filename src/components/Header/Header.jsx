@@ -6,6 +6,7 @@ import { PointsButton } from '../PointsButton/PointsButton';
 
 export const Header = () => {
   const globalSum = useContext(GlobalSum)
+
   return (
     <main className="header">
       <div className="names-wrapper">
@@ -13,7 +14,7 @@ export const Header = () => {
         <input type="text" />
       </div>
       <div className="names-wrapper">
-        <span>PDJ:</span>
+        <span>Personagem:</span>
         <input type="text" />
       </div>
       <PointsButton />
