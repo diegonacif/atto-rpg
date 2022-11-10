@@ -9,14 +9,17 @@ import { GlobalSum } from './Contexts/GlobalSum';
 import './Styles/global.css';
 
 function App() {
+  const [activeCategory, setActiveCategory] = useState('');
   const [sum, setSum] = useState(0);
-  const callbackSum = (value) => {
-    setSum(value);
-  } 
+  const [attSum, setAttSum] = useState(0);
 
   return (
-    <GlobalSum.Provider value={{ sum, setSum, callbackSum}}>
-      <Header sumValue={sum}/>
+    <GlobalSum.Provider 
+      value={{ 
+        sum, setSum, attSum, setAttSum
+      }}
+    >
+      <Header />
       <Navbar />
       <Outlet />
     </GlobalSum.Provider>

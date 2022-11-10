@@ -32,9 +32,9 @@ export const Attributes = () => {
   });
 
   // Soma dos pontos
-  const [attSum, setAttSum] = useState(0);
+  // const [attSum, setAttSum] = useState(0);
   useEffect(() => {
-    setAttSum(sum(
+    globalSum.setAttSum(sum(
       strCost, 
       dexCost, 
       intCost, 
@@ -97,17 +97,12 @@ export const Attributes = () => {
     setValue('fatiguePoints', numberMask(watch('fatiguePoints').replace(/[^0-9]/, '')))
   }, [watch('fatiguePoints'), watch('vitality')]);
 
-  // Soma indo para componente pai
-  useEffect(() => {
-    globalSum.callbackSum(attSum)
-  }, [attSum]);
-
+  
   // Classe span
   const spanColor = (cost) => cost < 0 ? "red-text" : "";
 
   return (
     <>
-      <h1 className="attributes-title">Atributos ({attSum})</h1> 
       <main className="attributes">
         <section>
           <div className="att-row">
