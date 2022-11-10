@@ -7,6 +7,7 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+  -webkit-tap-highlight-color: transparent; /* remove color highlight on tap */
 }
 
 a, a:visited, a:hover, a:active {
