@@ -1,8 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef } from 'react';
 import { GlobalSum } from '../../Contexts/GlobalSum';
 
 // Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
+
+// Outside Click (Hook)
+import { useOnClickOutside } from 'usehooks-ts'
 
 export const PointsButton = () => {
   const globalSum = useContext(GlobalSum)
@@ -27,11 +30,21 @@ export const PointsButton = () => {
     leave: { x: 2, y: -10, opacity: 0 },
     config: {duration: 200},
   });
+
+  // Outside Click (Variable)
+  const refContainer = useRef(null);
+
+  const handleClickOutside = () => {
+    setIsOpen(false);
+  }
+
+  useOnClickOutside(refContainer, handleClickOutside)
   
   return (
     <div
       onClick={() => handleIsOpen()} 
       className="points-button-container"
+      ref={refContainer} // Outside Click (Reference)
     >
       <span>XP: {globalSum.sum}</span>
       {
