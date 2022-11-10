@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { GlobalSum } from '../../Contexts/GlobalSum';
 
 import '../../Styles/global.css';
+import { PointsButton } from '../PointsButton/PointsButton';
 
 export const Header = () => {
   const globalSum = useContext(GlobalSum)
@@ -15,9 +16,7 @@ export const Header = () => {
         <span>PDJ:</span>
         <input type="text" />
       </div>
-      <div className="xp-wrapper">
-        <span>XP: {globalSum.sum}</span>
-      </div>
+      <PointsButton />
     </main>
   );
 };

@@ -14,6 +14,7 @@ a, a:visited, a:hover, a:active {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 100vw;
   height: 4rem;
   margin: 0;
   background-color: #5b0788;
@@ -26,7 +27,7 @@ a, a:visited, a:hover, a:active {
 .header input {
   display: flex;
   align-items: center;
-  width: 6.25rem;
+  width: 6rem;
   height: 2rem;
   padding: 0 0.25rem;
   color: white;
@@ -134,4 +135,57 @@ a, a:visited, a:hover, a:active {
   width: 100%;
   padding-left: 1rem;
   font-size: 1.5rem;
+}
+
+.points-button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  padding: 0 0.75rem;
+  background-color: green;
+  cursor: pointer;
+}
+.points-button-container .total-cost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -0.75rem;
+  right: 6.75rem;
+  background-color: green;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.25rem 0.5rem;
+  gap: 0.25rem;
+  border-radius: 4px;
+  cursor: default;
+}
+.points-button-container .exp-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -5rem;
+  right: 0.5rem;
+  background-color: green;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.25rem 0.5rem;
+  gap: 0.25rem;
+  border-radius: 4px;
 }/*# sourceMappingURL=global.css.map */
