@@ -62,12 +62,15 @@ a, a:visited, a:hover, a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-top: 2rem;
 }
 .navbar ul {
   display: flex;
   gap: 1rem;
+  width: 100%;
 }
 .navbar ul .category-wrapper {
   padding-bottom: 0.5rem;
@@ -103,6 +106,12 @@ a, a:visited, a:hover, a:active {
 }
 .attributes .navbar-container {
   grid-column-start: span 2;
+  overflow: scroll;
+  max-width: 100vw;
+  scrollbar-width: none;
+}
+.attributes .navbar-container:-webkit-scrollbar { /* Sumindo com a scrollbar */
+  display: none;
 }
 .attributes section {
   width: 100%;
@@ -205,4 +214,46 @@ a, a:visited, a:hover, a:active {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
+}
+
+.perks-flaws-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.perks-flaws-container .navbar-container {
+  overflow: scroll;
+  max-width: 100vw;
+  scrollbar-width: none;
+}
+.perks-flaws-container .navbar-container:-webkit-scrollbar { /* Sumindo com a scrollbar */
+  display: none;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.skills-container .navbar-container {
+  overflow: scroll;
+  max-width: 100vw;
+  scrollbar-width: none;
+}
+.skills-container .navbar-container:-webkit-scrollbar { /* Sumindo com a scrollbar */
+  display: none;
+}
+
+.equipments-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.equipments-container .navbar-container {
+  overflow: scroll;
+  max-width: 100vw;
+  scrollbar-width: none;
+}
+.equipments-container .navbar-container:-webkit-scrollbar { /* Sumindo com a scrollbar */
+  display: none;
 }/*# sourceMappingURL=global.css.map */

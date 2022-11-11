@@ -26,17 +26,24 @@ export const Navbar = () => {
           <span>- {globalSum.attSum}</span>
         </Link>
         <Link 
-          to="/skills" 
+          to="/perks-flaws" 
           onClick={() => handleClick(2)}
           className={isActive === 2 ? 'category-wrapper active' : 'category-wrapper'}
+        >
+          <span>Vantagens e Desvantagens</span>
+        </Link>
+        <Link 
+          to="/skills" 
+          onClick={() => handleClick(3)}
+          className={isActive === 3 ? 'category-wrapper active' : 'category-wrapper'}
         >
           <span>Perícias</span>
           <span>- {globalSum.skillSum}</span>
         </Link>
         <Link 
           to="/equipments" 
-          onClick={() => handleClick(3)}
-          className={isActive === 3 ? 'category-wrapper active' : 'category-wrapper'}
+          onClick={() => handleClick(4)}
+          className={isActive === 4 ? 'category-wrapper active' : 'category-wrapper'}
         >
           <span>Equipamentos</span>
         </Link>

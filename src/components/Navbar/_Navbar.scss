@@ -2,12 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: max-content;
   margin-top: 2rem;
-  
+
   ul {
     display: flex;
     gap: 1rem;
+    width: 100%;
 
     // &.active {
     //   color: $primary-color;

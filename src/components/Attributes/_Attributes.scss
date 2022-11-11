@@ -9,6 +9,8 @@
 
   .navbar-container {
     grid-column-start: span 2;
+    @include sliderNavbar;
+    
   }
 
   section {

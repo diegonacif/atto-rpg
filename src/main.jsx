@@ -13,6 +13,7 @@ import { Skills } from './components/Skills/Skills';
 import { Equipments } from './components/Equipments/Equipments';
 import { Attributes } from './components/Attributes/Attributes';
 import { Experience } from './pages/Experience/Experience';
+import { PerksFlaws } from './components/PerksFlaws/PerksFlaws';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App />}>
         <Route index element={<Attributes />} />
         <Route path="skills" element={<Skills />} />
+        <Route path="perks-flaws" element={<PerksFlaws />} />
         <Route path="equipments" element={<Equipments />} />
         <Route path="experience" element={<Experience />} />
       </Route>

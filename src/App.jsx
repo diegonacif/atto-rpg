@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { GlobalSum } from './Contexts/GlobalSum';
 
 import './Styles/global.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [sum, setSum] = useState(0); // Resultado
