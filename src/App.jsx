@@ -14,13 +14,14 @@ function App() {
 
   const [attSum, setAttSum] = useState(0);
   const [skillSum, setSkillSum] = useState(0);
-  const [disvantageSum, setDisvantageSum] = useState(0);
+  const [vantageSum, setVantageSum] = useState(50);
+  const [disvantageSum, setDisvantageSum] = useState(30);
 
   const [navActive, setNavActive] = useState(1);
 
   useEffect(() => {
-    setCostSum((attSum + skillSum) - disvantageSum)
-  }, [attSum, skillSum, disvantageSum])
+    setCostSum((attSum + skillSum + vantageSum) - disvantageSum)
+  }, [attSum, skillSum, disvantageSum, vantageSum])
 
   useEffect(() => {
     setSum(expSum - costSum)
@@ -43,6 +44,8 @@ function App() {
         setExpSum,
         disvantageSum,
         setDisvantageSum,
+        vantageSum,
+        setVantageSum,
       }}
     >
       <Header />

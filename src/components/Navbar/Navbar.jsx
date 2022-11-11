@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { GlobalSum } from '../../Contexts/GlobalSum';
 
@@ -14,6 +14,11 @@ export const Navbar = () => {
     setNavActive(index);
   };
 
+  const [perksFlawsBalance, setPerksFlawsBalance] = useState(0);
+  useEffect(() => {
+    setPerksFlawsBalance(globalSum.vantageSum - globalSum.disvantageSum)
+  }, [])
+
   return (
     <main className="navbar">
       <ul>
@@ -22,23 +27,24 @@ export const Navbar = () => {
           onClick={() => handleClick(1)}
           className={isActive === 1 ? 'category-wrapper active' : 'category-wrapper'}
         >
-          <span>Atributos</span>
-          <span>- {globalSum.attSum}</span>
+          <span>Atributos:</span>
+          <span>{globalSum.attSum}</span>
         </Link>
         <Link 
           to="/perks-flaws" 
           onClick={() => handleClick(2)}
           className={isActive === 2 ? 'category-wrapper active' : 'category-wrapper'}
         >
-          <span>Vantagens e Desvantagens</span>
+          <span id="perks-span">Vantagens e Desvantagens:</span>
+          <span>{perksFlawsBalance}</span>
         </Link>
         <Link 
           to="/skills" 
           onClick={() => handleClick(3)}
           className={isActive === 3 ? 'category-wrapper active' : 'category-wrapper'}
         >
-          <span>Perícias</span>
-          <span>- {globalSum.skillSum}</span>
+          <span>Perícias:</span>
+          <span>{globalSum.skillSum}</span>
         </Link>
         <Link 
           to="/equipments" 
