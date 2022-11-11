@@ -31,7 +31,7 @@ export const Navbar = () => {
           className={isActive === 2 ? 'category-wrapper active' : 'category-wrapper'}
         >
           <span>Perícias</span>
-          <span>- 0 </span>
+          <span>- {globalSum.skillSum}</span>
         </Link>
         <Link 
           to="/equipments" 

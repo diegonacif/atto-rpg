@@ -48,15 +48,15 @@ export const PointsButton = () => {
       ref={refContainer} // Outside Click (Reference)
     >
       <div className="result-wrapper">
-        <span>XP</span>
+        <span>Resta</span>
         <span>{globalSum.sum}</span>
       </div>
       {
         transitionCost(
           (styles, item) => item &&
           <animated.div className="total-cost" style={styles}>
-            <span>Soma geral</span>
-            <span>{globalSum.sum}</span>
+            <span>Gasto Total</span>
+            <span>{globalSum.costSum}</span>
           </animated.div>
         )
       }
@@ -65,8 +65,8 @@ export const PointsButton = () => {
           (styles, item) => item &&
           <animated.div className="exp-link" style={styles}>
             <Link to="experience" onClick={() => globalSum.setNavActive(0)}>
-              <span>Exp total</span>
-              <span>1020</span>
+              <span>Experiência</span>
+              <span>{globalSum.expSum}</span>
             </Link>
           </animated.div>
         )
