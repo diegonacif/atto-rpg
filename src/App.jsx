@@ -14,8 +14,8 @@ function App() {
 
   const [attSum, setAttSum] = useState(0);
   const [skillSum, setSkillSum] = useState(0);
-  const [vantageSum, setVantageSum] = useState(50);
-  const [disvantageSum, setDisvantageSum] = useState(30);
+  const [vantageSum, setVantageSum] = useState(0);
+  const [disvantageSum, setDisvantageSum] = useState(0);
 
   const [navActive, setNavActive] = useState(1);
 
